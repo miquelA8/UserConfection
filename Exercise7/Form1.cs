@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Exercici6
+namespace Exercise7
 {
     public partial class Form1 : Form
     {
@@ -17,16 +17,10 @@ namespace Exercici6
             InitializeComponent();
         }
 
-        private void colorBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String fill = "The choosen colour is: ";
-
-            textBox.Text = fill + colorBox.SelectedItem;
-        }
-
-        private void textBox_TextChanged(object sender, EventArgs e)
-        {
-            
+            String fill = "The colour choosen is: ";
+            textSolution.Text = fill + colorBox.SelectedItem;
         }
     }
 }
