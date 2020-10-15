@@ -48,11 +48,11 @@ namespace Exercice4
                 var1 = Int32.Parse(textOperand1.Text);
                 var2 = Int32.Parse(textOperand2.Text);
 
-                if (textSymbol.Text == "+")
+                if (listSymbol.Text == "+")
                 {
                     addStonks();
                 }
-                else if (textSymbol.Text == "-")
+                else if (listSymbol.Text == "-")
                     {
                     substractStonks();
                 }
@@ -72,9 +72,17 @@ namespace Exercice4
 
         private void textSymbol_TextChanged(object sender, EventArgs e)
         {
+            if (listSymbol.Text == "+")
+            {
+                textSymbol.Text = "+";
+            }
+            else if (listSymbol.Text == "-")
+            {
+                textSymbol.Text = "-";
+            }
 
         }
-
+/*
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             textSymbol.Text = "+";
@@ -83,6 +91,19 @@ namespace Exercice4
         private void buttonSubstract_Click(object sender, EventArgs e)
         {
             textSymbol.Text = "-";
+        }
+*/
+        private void listSymbol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          if (listSymbol.SelectedIndex == 0)
+            {
+                textSymbol.Text = "+";
+            }
+          else if (listSymbol.SelectedIndex == 1)
+            {
+                textSymbol.Text = "-";
+            }
+                
         }
     }
 }
